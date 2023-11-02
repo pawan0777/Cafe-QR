@@ -1,6 +1,5 @@
 let ShoppingCart = document.getElementById("shopping-cart");
 let label = document.getElementById("label");
-
 /**
  * ! Basket to hold all the selected items
  * ? the getItem part is retrieving data from the local storage
@@ -160,10 +159,14 @@ let TotalAmount = () => {
 
     return (label.innerHTML = `
     <h2>Total Bill : Rs. ${amount}</h2>
-    <button class="checkout">Pay</button>
+    <button onclick = "pay()" class="checkout">Pay</button>
     <button onclick="clearCart()" class="removeAll">Clear Items</button>
     `);
   } else return;
+};
+let pay = () => {
+  var value = amount;
+  window.open("upi://pay?pn=Pawan%Bhawsar&pa=9340790805@ybl&am="+ value +"&cu=INR", "_Self");
 };
 
 TotalAmount();
@@ -178,6 +181,3 @@ let clearCart = () => {
   calculation();
   localStorage.setItem("data", JSON.stringify(basket));
 };
-
-// Total Price
-console.log(amount);
