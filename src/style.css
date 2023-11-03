@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 i {
@@ -22,7 +22,7 @@ a {
 }
 
 h3 {
-  color: white;
+  color:#E4C590;
 }
 
 p {
@@ -30,11 +30,11 @@ p {
 }
 
 .price-quantity {
-  color: white;
+  color: #E4C590;
 }
 
 .quantity {
-  color: white
+  color: #E4C590;
 }
 
 /**
@@ -65,8 +65,8 @@ p {
   top: -15px;
   right: -10px;
   font-size: 16px;
-  background-color: red;
-  color: white;
+  background-color: #E4C590;
+  color: black;
   padding: 3px;
   border-radius: 3px;
 }
@@ -76,6 +76,7 @@ p {
 **/
 
 .shop {
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   display: grid;
   grid-template-columns: repeat(4, 223px);
   gap: 30px;
@@ -163,7 +164,7 @@ p {
   background-color: green;
 }
 .removeAll {
-  background-color: red;
+  background-color: rgb(189, 153, 52);
 }
 .bi-x-lg {
   color: red;

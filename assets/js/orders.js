@@ -43,14 +43,11 @@ let generateCartItems = () => {
               <p>${name}</p>
               <p class="cart-item-price">Rs. ${price}</p>
             </h4>
-            <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
           </div>
 
           <div class="cart-buttons">
             <div class="buttons">
-              <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
               <div id=${id} class="quantity">${item}</div>
-              <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
             </div>
           </div>
 
@@ -65,9 +62,6 @@ let generateCartItems = () => {
     ShoppingCart.innerHTML = "";
     label.innerHTML = `
     <h2>Cart is Empty</h2>
-    <a href="index.html">
-      <button class="HomeBtn">Back to Home</button>
-    </a>
     `;
   }
 };
@@ -158,9 +152,8 @@ let TotalAmount = () => {
       .reduce((x, y) => x + y, 0);
 
     return (label.innerHTML = `
-    <h2>Total Bill : Rs. ${amount}</h2>
-    <button onclick = "pay()" class="checkout">Pay</button>
-    <button onclick="clearCart()" class="removeAll">Clear Items</button>
+    <h2>Order Amount : Rs. ${amount}</h2>
+    <h2>Table No. 3</h2>
     `);
   } else return;
 };
