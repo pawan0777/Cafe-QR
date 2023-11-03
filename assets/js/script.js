@@ -15,7 +15,12 @@ window.addEventListener("load", function () {
   document.body.classList.add("loaded");
 });
 
+let basket = JSON.parse(localStorage.getItem("data")) || [];
 
+window.onload = function() {
+  basket = [];
+  localStorage.setItem("data", JSON.stringify(basket));
+};
 
 /**
  * add event listener on multiple elements
