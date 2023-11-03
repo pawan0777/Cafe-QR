@@ -877,6 +877,10 @@ body.nav-active { overflow: hidden; }
 .hero .slider-item.active .btn { animation-delay: 2s; }
 
 
+.img-cover1 {
+  border-radius: 1%;
+  width: 100px;
+}
 
 
 
